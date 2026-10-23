@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for DwnLodr by UTK Apps. Learn about local storage, browsing, downloads, permissions, and your privacy choices.">
+  <meta name="theme-color" content="#2456d6">
+  <title>Privacy Policy | DwnLodr by UTK Apps</title>
+  <style>
+    :root { color-scheme: light; --ink:#19243a; --muted:#526078; --blue:#2456d6; --line:#dee5ef; --paper:#fff; --wash:#f5f7fb; }
+    * { box-sizing:border-box; }
+    html { scroll-padding-top:24px; }
+    body { margin:0; background:var(--wash); color:var(--ink); font:16px/1.75 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:#1748bd; text-underline-offset:3px; overflow-wrap:anywhere; }
+    a:hover { text-decoration-thickness:2px; }
+    a:focus-visible { outline:3px solid #c06308; outline-offset:4px; border-radius:2px; }
+    .skip { position:absolute; left:16px; top:-80px; padding:8px 16px; background:white; z-index:2; }
+    .skip:focus { top:12px; }
+    .top { background:var(--paper); border-bottom:1px solid var(--line); }
+    .brand { max-width:1140px; margin:auto; padding:22px 32px; display:flex; gap:12px; align-items:center; }
+    .mark { width:42px; height:42px; background:var(--blue); color:#fff; border-radius:12px; display:grid; place-items:center; flex-shrink:0; }
+    .brand strong { display:block; font-size:18px; line-height:1.3; letter-spacing:-.4px; }
+    .brand small { color:var(--muted); font-size:12px; }
+    .label { margin-left:auto; color:var(--muted); font-size:13px; }
+    .layout { max-width:1140px; margin:48px auto 0; padding:0 32px; display:grid; grid-template-columns:220px minmax(0,1fr); gap:48px; align-items:start; }
+    nav { position:sticky; top:28px; font-size:13px; line-height:1.5; padding-bottom:28px; }
+    nav p { margin:0 0 14px; font-size:11px; font-weight:750; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); }
+    nav ol { list-style:none; margin:0; padding:0; }
+    nav li { margin:0 0 3px; }
+    nav a { display:block; padding:6px 0; color:var(--muted); text-decoration:none; }
+    nav a:hover { color:var(--blue); text-decoration:underline; }
+    main { min-width:0; padding-bottom:32px; }
+    .eyebrow { color:var(--blue); font-weight:750; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin:0 0 10px; }
+    h1 { font-size:clamp(36px,5vw,52px); line-height:1.15; letter-spacing:-1.8px; margin:0 0 18px; }
+    .intro { font-size:19px; color:var(--muted); line-height:1.65; margin:0 0 22px; }
+    .dates { display:flex; flex-wrap:wrap; gap:8px 24px; font-size:13px; color:var(--muted); padding-bottom:28px; border-bottom:1px solid var(--line); }
+    .dates time { color:var(--ink); font-weight:600; }
+    .summary { background:#eaf0ff; border:1px solid #d3dfff; border-radius:16px; padding:24px 28px; margin:28px 0 36px; }
+    .summary h2 { margin:0 0 12px; font-size:20px; }
+    .summary ul { padding-left:20px; margin:0; }
+    .summary li { padding:3px 0; }
+    section { margin:0 0 34px; }
+    h2 { font-size:23px; line-height:1.4; letter-spacing:-.4px; margin:0 0 14px; }
+    h2 .number { color:var(--blue); font-size:13px; display:block; margin-bottom:5px; font-weight:650; letter-spacing:.5px; }
+    h3 { font-size:17px; margin:22px 0 8px; }
+    p { margin:0 0 14px; }
+    ul,ol { padding-left:23px; }
+    li { margin:6px 0; }
+    .table-wrap { overflow-x:auto; margin:20px 0; border:1px solid var(--line); border-radius:12px; background:var(--paper); }
+    table { width:100%; border-collapse:collapse; font-size:14px; line-height:1.65; }
+    caption { text-align:left; padding:16px 18px; font-weight:650; background:#edf1f8; }
+    th,td { padding:15px 18px; vertical-align:top; text-align:left; border-top:1px solid var(--line); }
+    thead th { font-size:12px; color:var(--muted); }
+    tbody th { width:29%; font-weight:650; }
+    .note { padding:16px 20px; border-left:3px solid var(--blue); background:#edf1f8; border-radius:0 8px 8px 0; }
+    .contact { padding:26px 28px; background:var(--paper); border:1px solid var(--line); border-radius:16px; }
+    .contact a { font-weight:650; }
+    .contact p:last-child { margin-bottom:0; }
+    code { font-family:ui-monospace,Consolas,monospace; font-size:.88em; overflow-wrap:anywhere; }
+    footer { max-width:1140px; padding:24px 32px 36px; margin:auto; color:var(--muted); font-size:12px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; }
+    @media(max-width:850px) { .layout { grid-template-columns:1fr; gap:28px; margin-top:30px; } nav { position:static; border-bottom:1px solid var(--line); padding-bottom:22px; } nav ol { columns:2; column-gap:24px; } nav li { break-inside:avoid; } }
+    @media(max-width:480px) { .brand { padding:18px 20px; } .label { display:none; } .layout { padding:0 20px; } .summary,.contact { padding:20px; } .intro { font-size:17px; } th,td { padding:12px; } footer { padding:22px 20px 30px; } }
+    @media print { body { background:white; font-size:11pt; } .top,nav,.skip { display:none; } .layout { display:block; max-width:none; margin:0; padding:0; } h1 { font-size:30pt; } section { break-inside:auto; } h2,h3 { break-after:avoid; } .summary,.contact { break-inside:avoid; } footer { padding:12px 0; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#policy">Skip to privacy policy</a>
+  <header class="top">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div><strong>DwnLodr</strong><small>by UTK Apps</small></div>
+      <span class="label">Privacy &amp; transparency</span>
+    </div>
+  </header>
+  <div class="layout">
+    <nav aria-label="Policy contents">
+      <p>On this page</p>
+      <ol>
+        <li><a href="#about">01 &nbsp; About this policy</a></li>
+        <li><a href="#local-data">02 &nbsp; Data on your device</a></li>
+        <li><a href="#network">03 &nbsp; Network &amp; searches</a></li>
+        <li><a href="#clipboard">04 &nbsp; Clipboard access</a></li>
+        <li><a href="#cookies">05 &nbsp; Cookies &amp; sign-ins</a></li>
+        <li><a href="#incognito">06 &nbsp; Incognito &amp; ad blocking</a></li>
+        <li><a href="#whatsapp">07 &nbsp; WhatsApp Status</a></li>
+        <li><a href="#vault">08 &nbsp; Private media &amp; PIN</a></li>
+        <li><a href="#permissions">09 &nbsp; Android permissions</a></li>
+        <li><a href="#third-parties">10 &nbsp; Other services</a></li>
+        <li><a href="#deletion">11 &nbsp; Retention &amp; deletion</a></li>
+        <li><a href="#security">12 &nbsp; Security</a></li>
+        <li><a href="#children">13 &nbsp; Children</a></li>
+        <li><a href="#contact">14 &nbsp; Your rights &amp; contact</a></li>
+        <li><a href="#changes">15 &nbsp; Policy updates</a></li>
+      </ol>
+    </nav>
+    <main id="policy">
+      <p class="eyebrow">DwnLodr · Android</p>
+      <h1>Privacy Policy</h1>
+      <p class="intro">What DwnLodr keeps on your phone, what it sends when you use online features, and the choices you have.</p>
+      <div class="dates"><span>Effective: <time datetime="2026-10-23">23 October 2026</time></span><span>Last updated: <time datetime="2026-10-23">23 October 2026</time></span></div>
+      <aside class="summary" aria-labelledby="at-a-glance">
+        <h2 id="at-a-glance">At a glance</h2>
+        <ul>
+          <li><strong>No DwnLodr account is required.</strong> Browsing records, settings, download records and private media are stored on your device.</li>
+          <li><strong>Online features contact other services.</strong> Websites, media hosts and Google Search receive the requests needed to provide the content you choose.</li>
+          <li><strong>No built-in advertising or remote analytics SDK.</strong> Websites opened inside the app may have their own ads, cookies and tracking.</li>
+          <li><strong>You control local data.</strong> Clear browsing records, remove files, close private sessions, or clear app storage. Unhide private media first if you want to keep it.</li>
+        </ul>
+      </aside>
+
+      <section id="about">
+        <h2><span class="number">01</span>About this policy</h2>
+        <p>UTK Apps ("we", "us" or "our") develops DwnLodr (the "app"), an Android application for browsing supported websites, saving permitted media, and playing and organizing media on your device. Its package name is <code>com.dwnlodr.app</code>.</p>
+        <p>This policy describes DwnLodr's data handling, including the features available in version 0.9.44. It covers the app and this policy webpage. Websites and services you access through the app have their own privacy policies.</p>
+        <p>DwnLodr does not operate an app account system or send your browsing history, downloads or private media to a UTK Apps backend. If you choose to email us, we receive the information you include in that email as described below.</p>
+      </section>
+
+      <section id="local-data">
+        <h2><span class="number">02</span>Data stored or processed on your device</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Local data used to provide app features</caption>
+            <thead><tr><th scope="col">Data</th><th scope="col">Purpose and storage</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Download records and media</th><td>Source URLs, titles, thumbnails, formats, progress, errors, timestamps and saved file locations support downloads and the media library. Records are kept in app-private storage. Saved media is written to the default Downloads/DwnLodr folder or a folder you select.</td></tr>
+              <tr><th scope="row">Browsing history, bookmarks and tabs</th><td>Visited addresses, page titles and visit times support History and Bookmarks. Up to 200 distinct history addresses, 500 bookmarks and 15 regular tabs are retained locally. Saved tabs include page addresses, titles, ordering, desktop-site settings and navigation state. Search terms can appear in saved search-page URLs.</td></tr>
+              <tr><th scope="row">Website session and media information</th><td>WebView cookies, website storage and caches support browsing and sign-ins. Media detection processes page information, media addresses and relevant request headers. Regular-session media-format snapshots can be stored privately so queued downloads can resume.</td></tr>
+              <tr><th scope="row">Files you select</th><td>Android's file and folder pickers grant access to the media or locations you choose. Local references, titles and custom folder organization support playback and file actions. Importing an existing file into Player does not upload it.</td></tr>
+              <tr><th scope="row">Preferences and private media</th><td>Appearance, ad-blocking and save-location choices, selected folder access, clipboard dismissal hashes, and the optional Anonymous media vault and PIN verifier are stored locally.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Playback, media merging, MP3 conversion, and private-media encryption take place on your device. The app does not upload your selected local files to UTK Apps for these operations.</p>
+      </section>
+
+      <section id="network">
+        <h2><span class="number">03</span>Network requests and web searches</h2>
+        <p>When you open a website, submit a link for lookup, load a thumbnail, stream media or download content, DwnLodr contacts the relevant website, media host, content delivery network or other resources used by that page. These recipients receive the requested address and normal connection information, such as your IP address, browser or app request headers, and applicable website cookies or session information. URLs may themselves contain search terms, content identifiers or access tokens.</p>
+        <p>When you submit search words using Search on Home or Go in the browser, the app opens Google Search and sends those terms to Google over HTTPS. Google receives the search request, IP address, browser information and applicable cookies. DwnLodr does not send search words to a suggestion provider while you type. Google's processing is explained in its <a href="https://policies.google.com/privacy">Privacy Policy</a>.</p>
+        <p>Media requests go from your device to the relevant services; UTK Apps does not run a download proxy for this app. A website may redirect a request or load resources from other companies. Those recipients may process data outside your country under their own policies. Android and your network provider also handle the connectivity needed for these requests.</p>
+        <p>Copying a link places it on the device clipboard. Choosing Share opens Android's share sheet and passes the chosen link or media to the receiving app you select, whose own privacy practices then apply.</p>
+      </section>
+
+      <section id="clipboard">
+        <h2><span class="number">04</span>Clipboard link checks</h2>
+        <p>When the app opens or returns to the foreground with its main window focused, it checks the current clipboard once for a public web link. A suitable link is offered in a confirmation before it is pasted into Home or used for an online lookup. Declining or dismissing the offer does not open that link or start a download.</p>
+        <p>The feature ignores non-web text, private or local addresses and clips Android marks as sensitive. It does not continuously monitor the clipboard in the background. The offered link and copy timestamp are held in memory during the activity session. When you dismiss an offer, the app stores a SHA-256 hash of the address and a 24-hour expiry locally to avoid repeated prompts; it does not save the raw clipboard text for that cooldown. Expired cooldown entries are pruned on later dismissals.</p>
+        <p>Once you accept a link, the normal lookup, website-session and browsing-record behavior described in this policy applies. Android may show a clipboard-access notification.</p>
+      </section>
+
+      <section id="cookies">
+        <h2><span class="number">05</span>Website cookies and sign-ins</h2>
+        <p>The regular in-app browser uses Android WebView. Websites can set cookies, including third-party cookies, and use website storage and caches. A website's sign-in session can persist between app launches. Sign-in forms belong to the website you visit; DwnLodr does not create a UTK Apps account or send website passwords to UTK Apps.</p>
+        <p>To retrieve media you have chosen, the app may use the relevant website's session cookies and request headers for page and media requests. Some lookups create temporary app-private cookie or page files that are removed when the lookup finishes. Regular-session cookies and website storage can persist separately from History and tabs.</p>
+        <p>Signing out through a website ends that service's session according to its controls. Clearing DwnLodr's storage in Android removes its locally stored website sessions. Clearing History alone does not clear cookies, sign out of websites or close open tabs.</p>
+      </section>
+
+      <section id="incognito">
+        <h2><span class="number">06</span>Incognito browsing and ad blocking</h2>
+        <p>On supported WebView versions, Incognito uses a separate temporary browser profile. Its pages are not added to regular History, its tabs are not saved for restoration, and its cookies and website storage are separate from the regular browser. Closing Incognito clears that profile's browsing data and discards its temporary media snapshots. Abandoned private profiles are cleaned up on a later startup when supported by WebView.</p>
+        <p>Incognito limits local browsing records. Websites, search providers and network operators can still receive and observe the connections needed to access online content. Files you explicitly download, and their download records, can remain in the ordinary library after an Incognito session closes.</p>
+        <p>The optional Block Ads setting applies local filtering rules and page adjustments. It does not upload browsing activity to a filtering service or download a remote filter subscription. Some website ads and tracking can still load. DwnLodr itself includes no advertising, advertising-ID, remote analytics or automatic crash-reporting SDK in the version covered by this policy.</p>
+      </section>
+
+      <section id="whatsapp">
+        <h2><span class="number">07</span>Local WhatsApp Status access</h2>
+        <p>If you use the WhatsApp Status feature, Android asks you to select the local <code>.Statuses</code> folder. The app retains read access to that selected folder to display locally available photos and videos. While the gallery is visible, it checks that folder for changes. It copies only statuses you select to your chosen download location and does not modify or delete the source status files.</p>
+        <p>This feature does not sign in to WhatsApp, retrieve statuses from WhatsApp's servers, or read your contacts, chat messages or account credentials. Status media is processed locally and is not sent to UTK Apps or Google Search by this feature. Content you deliberately share through another app is handled by that receiving app.</p>
+      </section>
+
+      <section id="vault">
+        <h2><span class="number">08</span>Anonymous private media and PIN</h2>
+        <p>The optional Anonymous feature moves selected photos and videos into encrypted app-private storage outside the ordinary gallery. It uses Google Tink streaming authenticated encryption with keys protected by Android Keystore. The app verifies the encrypted copy before removing the public copy.</p>
+        <p>Your 6–10 digit PIN is checked locally. A salted PIN verifier is stored instead of the PIN itself. The correct PIN entered on Home opens Anonymous and is not sent to Google. However, explicitly pressing Search with a nonmatching number submits that number as an ordinary Google search. The app does not automatically search numeric input while you type.</p>
+        <p>Private previews are processed locally; temporary preview files are cleared when previews close or the vault locks, and stale previews are cleaned on startup. Leaving Anonymous or backgrounding the app locks the private session. The vault has no developer-run PIN recovery or cloud restore service.</p>
+        <p class="note"><strong>Keep files you need:</strong> unhide private media before clearing app storage or uninstalling DwnLodr. Clearing or uninstalling removes the vault and its keys, and UTK Apps cannot recover those files or a forgotten PIN.</p>
+      </section>
+
+      <section id="permissions">
+        <h2><span class="number">09</span>Android permissions and access</h2>
+        <ul>
+          <li><strong>Internet and network state:</strong> browse websites, search, look up formats, download media and check or retrieve download-engine updates.</li>
+          <li><strong>Notifications:</strong> show download and playback status. You can control notification permission in Android. Titles or status details may be visible in device notifications according to your system settings.</li>
+          <li><strong>Foreground services and wake lock:</strong> keep user-started downloads, media processing and playback running as needed, including when the app is in the background.</li>
+          <li><strong>Audio settings:</strong> support playback and audio controls.</li>
+          <li><strong>Selected file and folder access:</strong> read or manage media you select, save downloads to a chosen folder and read the selected WhatsApp Status folder. Android's pickers provide this access without a broad all-files permission.</li>
+        </ul>
+        <p>The app version covered by this policy does not request contacts, SMS, call logs, camera, microphone, device-location, accessibility-service or notification-listener access. Its notification permission displays the app's own notifications; it does not grant access to messages in other apps.</p>
+      </section>
+
+      <section id="third-parties">
+        <h2><span class="number">10</span>Third-party libraries, services and sharing</h2>
+        <p>DwnLodr uses Android and AndroidX components, Kotlin libraries, OkHttp, Coil, Media3, Google Tink, yt-dlp, youtubedl-android and FFmpeg for local application functionality and the content requests described above. These components are not a UTK Apps analytics platform.</p>
+        <p>The parties that may receive information when you use online features are:</p>
+        <ul>
+          <li><strong>Google:</strong> search requests and related browser data when you use Google Search, or information sent by a Google webpage you visit. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+          <li><strong>Websites, media platforms, embedded providers and CDNs:</strong> page, media, image and session requests needed for the content you open, look up or save. Their own policies cover their collection, cookies, advertising and retention.</li>
+          <li><strong>GitHub and its delivery infrastructure:</strong> connection information when you choose to check or download a download-engine update, open GitHub links, or visit this GitHub Pages policy. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</li>
+          <li><strong>Apps or providers you select:</strong> information you deliberately share, or files accessed through a file or folder provider you choose. A cloud-backed document provider may process files under its own policy.</li>
+          <li><strong>Our email provider:</strong> your address, message and any attachments if you contact us by email, so we can receive and respond to your inquiry.</li>
+        </ul>
+        <p>We do not sell or rent personal data, use your local media or browsing records for our own advertising, or receive those records through an app telemetry service. We may disclose correspondence we actually hold if required by applicable law. This policy webpage contains no analytics script, advertising, tracking pixel or visitor form; its hosting provider still processes the connection needed to serve it.</p>
+      </section>
+
+      <section id="deletion">
+        <h2><span class="number">11</span>Retention and deletion</h2>
+        <p>Data remains for the time needed by the local feature or until you remove it. The following controls explain the differences between app records, website sessions and actual files:</p>
+        <ul>
+          <li><strong>History and bookmarks:</strong> delete individual entries or clear History from the browser menu. History also drops older entries when its 200-address limit is reached. Bookmarks remain until removed.</li>
+          <li><strong>Regular tabs:</strong> closing a tab removes it from the saved tab list. Closing tabs does not delete History, bookmarks or website cookies.</li>
+          <li><strong>Downloads and imported media:</strong> records remain until removed or app storage is cleared. Use the app's available file-delete action or a file manager to delete actual saved files. Removing a Player reference does not delete the original file. Files in shared or user-selected storage may remain after uninstalling.</li>
+          <li><strong>Cookies, site storage, settings and cached media information:</strong> retention varies by the website, cache and app feature. Some temporary lookup files are cleaned after use; older unused format snapshots are pruned. Android's Clear storage control removes the app's locally stored data and permissions associated with those records.</li>
+          <li><strong>Incognito:</strong> private browsing data is cleared when the session closes, with abandoned-profile cleanup on later startup. Downloads you chose to save remain separately.</li>
+          <li><strong>Clipboard dismissals:</strong> a hashed link is suppressed for 24 hours. Expired entries are pruned on subsequent dismissals; clearing app storage removes the stored hashes.</li>
+          <li><strong>Anonymous vault:</strong> encrypted files remain until unhidden or app data is deleted. Unhide first to preserve them. Clearing storage or uninstalling permanently removes private files and the local keys needed to read them.</li>
+          <li><strong>Privacy and support emails:</strong> we retain correspondence as needed to answer and resolve your request, then delete it unless retention is required by law. You may ask us to delete correspondence using the contact below.</li>
+        </ul>
+        <p>To remove all app-private data, use Android Settings → Apps → DwnLodr → Storage → Clear storage, or uninstall the app. Labels vary by device. First save or unhide files you want to keep; then separately remove any unwanted files from shared folders. DwnLodr has no developer account to delete. To delete information held by a website or other service, use that service's own privacy and account controls.</p>
+      </section>
+
+      <section id="security">
+        <h2><span class="number">12</span>How data is protected</h2>
+        <p>App-private records use Android's application storage protections. Anonymous media has the additional encryption described above; regular download files and browsing records do not have the vault's additional encryption. Shared downloads may be available to other apps that have appropriate access.</p>
+        <p>Google searches and this policy page use HTTPS. Online content uses HTTPS when supplied by the website or media source. DwnLodr can also open HTTP content, so it would be inaccurate to promise that every possible browser or media connection is encrypted. Use trusted websites and secure connections.</p>
+        <p>The app disables Android automatic backup in its configuration and keeps the vault in non-backup storage. It does not provide a UTK Apps cloud backup service. Device or document-provider backup behavior may depend on your device and chosen provider. No device, storage system or network can be guaranteed completely secure.</p>
+      </section>
+
+      <section id="children">
+        <h2><span class="number">13</span>Children's privacy</h2>
+        <p>DwnLodr is a general browsing and media utility and is not directed at children. Websites accessible through the browser may contain age-restricted material and are subject to their own age rules. We do not knowingly collect children's personal information through a UTK Apps account or analytics service. If you believe a child has sent personal information to our contact address, email us so we can address and delete it as appropriate.</p>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2><span class="number">14</span>Your privacy choices and contact</h2>
+        <p>You can use the local deletion controls above, manage Android permissions, sign out of websites, choose whether to use online features, and contact us with privacy questions or requests. Depending on your location, applicable law may give you rights to access, correct or delete personal information, restrict or object to processing, receive a copy, withdraw consent where applicable, or complain to a data-protection authority.</p>
+        <p>UTK Apps cannot remotely inspect or erase information held only on your device. We can help you locate the relevant controls and handle requests concerning correspondence we receive. Website providers handle requests for the information they hold.</p>
+        <p><strong>Developer:</strong> UTK Apps<br><strong>App:</strong> DwnLodr · <code>com.dwnlodr.app</code><br><strong>Privacy contact:</strong> <a href="mailto:utkapps.dev@gmail.com?subject=DwnLodr%20privacy%20inquiry">utkapps.dev@gmail.com</a></p>
+        <p>Please identify DwnLodr in your message. Do not send your vault PIN, website passwords or private media to obtain support.</p>
+      </section>
+
+      <section id="changes">
+        <h2><span class="number">15</span>Changes to this policy</h2>
+        <p>We will update this page and the "Last updated" date when DwnLodr's privacy practices change. Material changes will also be communicated through an appropriate in-app notice or release information. The version published here describes the practices covered from the effective date above.</p>
+      </section>
+    </main>
+  </div>
+  <footer><span>© 2026 UTK Apps · DwnLodr</span><span><a href="#policy">Back to top</a> &nbsp; · &nbsp; <a href="mailto:utkapps.dev@gmail.com">Contact privacy support</a></span></footer>
+</body>
+</html>
