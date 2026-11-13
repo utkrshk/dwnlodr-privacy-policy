@@ -90,20 +90,21 @@
         <li><a href="#security">12 &nbsp; Security</a></li>
         <li><a href="#children">13 &nbsp; Children</a></li>
         <li><a href="#contact">14 &nbsp; Your rights &amp; contact</a></li>
-        <li><a href="#changes">15 &nbsp; Policy updates</a></li>
+        <li><a href="#failure-reports">15 &nbsp; Optional failure reports</a></li>
+        <li><a href="#changes">16 &nbsp; Policy updates</a></li>
       </ol>
     </nav>
     <main id="policy">
       <p class="eyebrow">DwnLodr · Android</p>
       <h1>Privacy Policy</h1>
       <p class="intro">What DwnLodr keeps on your phone, what it sends when you use online features, and the choices you have.</p>
-      <div class="dates"><span>Effective: <time datetime="2026-10-23">23 October 2026</time></span><span>Last updated: <time datetime="2026-10-25">25 October 2026</time></span></div>
+      <div class="dates"><span>Effective: <time datetime="2026-10-23">23 October 2026</time></span><span>Last updated: <time datetime="2026-11-13">13 November 2026</time></span></div>
       <aside class="summary" aria-labelledby="at-a-glance">
         <h2 id="at-a-glance">At a glance</h2>
         <ul>
           <li><strong>No DwnLodr account is required.</strong> Browsing records, settings, download records and private media are stored on your device.</li>
           <li><strong>Online features contact other services.</strong> Websites, media hosts and Google Search receive the requests needed to provide the content you choose.</li>
-          <li><strong>No built-in advertising or remote analytics SDK.</strong> Websites opened inside the app may have their own ads, cookies and tracking.</li>
+          <li><strong>No built-in advertising or general analytics SDK.</strong> Websites opened inside the app may have their own ads, cookies and tracking.</li>
           <li><strong>You control local data.</strong> Clear browsing records, remove files, close private sessions, or clear app storage. Unhide private media first if you want to keep it.</li>
         </ul>
       </aside>
@@ -111,8 +112,8 @@
       <section id="about">
         <h2><span class="number">01</span>About this policy</h2>
         <p>UTK Apps ("we", "us" or "our") develops DwnLodr (the "app"), an Android application for browsing supported websites, saving permitted media, and playing and organizing media on your device. Its package name is <code>com.dwnlodr.app</code>.</p>
-        <p>This policy describes DwnLodr's data handling as reviewed for version 0.9.67. It covers the app and this policy webpage. Websites and services you access through the app have their own privacy policies.</p>
-        <p>DwnLodr does not operate an app account system or send your browsing history, downloads or private media to a UTK Apps backend. If you choose to email us, we receive the information you include in that email as described below.</p>
+        <p>This policy describes DwnLodr's data handling, including optional failure reporting introduced for version 0.9.107. Reporting is available only in builds where the service has been configured and verified. It covers the app and this policy webpage. Websites and services you access through the app have their own privacy policies.</p>
+        <p>DwnLodr does not require an app account. Except for the optional failure reports described below, it does not send your browsing history, downloads or private media to a UTK Apps backend. If you choose to email us, we receive the information you include in that email as described below.</p>
       </section>
 
       <section id="local-data">
@@ -122,10 +123,10 @@
             <caption>Local data used to provide app features</caption>
             <thead><tr><th scope="col">Data</th><th scope="col">Purpose and storage</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Download records and media</th><td>Source URLs, titles, thumbnails, formats, progress, errors, timestamps and saved file locations support downloads and the media library. Records are kept in app-private storage. Saved media is written to the default Downloads/DwnLodr folder or a folder you select.</td></tr>
+              <tr><th scope="row">Download records and media</th><td>Source URLs, titles, thumbnails, formats, progress, errors, timestamps and saved file locations support downloads and the media library. Records are kept in app-private storage. With Sync to Gallery enabled (the default), new downloads are written to the default Downloads/DwnLodr folder or a folder you select. With it disabled, new downloads are saved privately in DwnLodr; this does not relocate or hide existing downloads. MP3 conversions of device-library videos are saved beside their source video when permitted.</td></tr>
               <tr><th scope="row">Browsing history, bookmarks and tabs</th><td>Visited addresses, page titles and visit times support History and Bookmarks. Up to 200 distinct history addresses, 500 bookmarks and 15 regular tabs are retained locally. Saved tabs include page addresses, titles, ordering, desktop-site settings and navigation state. Search terms can appear in saved search-page URLs.</td></tr>
               <tr><th scope="row">Website session and media information</th><td>WebView cookies, website storage and caches support browsing and sign-ins. Media detection processes page information, media addresses and relevant request headers. Regular-session media-format snapshots can be stored privately for queued downloads and later retries. These can include signed or expiring media addresses and other request information.</td></tr>
-              <tr><th scope="row">Files you select</th><td>Android's file and folder pickers grant access to the media or locations you choose. File references, names, sizes, media types, thumbnails and custom folder organization support Player and file actions. Adding a file to Player keeps a reference to the selected file; it does not automatically move, copy or upload it. A document provider you choose may itself use cloud storage.</td></tr>
+              <tr><th scope="row">Device media and files you select</th><td>With your Android video/audio permission, Player reads local media names, folders, locations, sizes, modification dates, durations and video dimensions to browse, sort and play your device library. This library information is processed on your device, without uploading your media. Copy and Move change local files only when you choose those actions. Android's file and folder pickers grant access to the media or locations you choose. Local references, titles and custom folder organization support playback and file actions. Importing an existing file into Player does not upload it.</td></tr>
               <tr><th scope="row">Playback and media processing</th><td>Media references, titles, duration, playback position and queue state are processed to play media and provide controls. Thumbnails, previews, decoding, seeking and MP3 conversion are processed on your device. Android receives media-session information to provide notification and lock-screen playback controls.</td></tr>
               <tr><th scope="row">App language and preferences</th><td>Your app-language choice is stored through Android's per-app language settings or app-private preferences, depending on the Android version. Translations are bundled with the app and do not require an online translation service. Appearance, ad-blocking, save-location and selected-folder choices are also stored locally.</td></tr>
               <tr><th scope="row">Clipboard dismissals and private media</th><td>Clipboard dismissal hashes and expiry times, encrypted Anonymous media, private-file metadata and the salted PIN verifier are stored locally. They support repeated-prompt suppression and the private-media features described below.</td></tr>
@@ -149,13 +150,14 @@
       <section id="clipboard">
         <h2><span class="number">04</span>Clipboard link checks</h2>
         <p>When the app opens or returns to the foreground with its main window focused, it checks the current clipboard once for a public web link. A suitable link is offered in a confirmation before it is pasted into Home or used for an online lookup. Declining or dismissing the offer does not open that link or start a download.</p>
-        <p>The feature ignores non-web text, private or local addresses and clips Android marks as sensitive. It does not continuously monitor the clipboard in the background. The offered link and copy timestamp are held in memory during the activity session. When you dismiss an offer, the app stores a SHA-256 hash of the address and a 24-hour expiry locally to avoid repeated prompts; it does not save the raw clipboard text for that cooldown. Expired cooldown entries are pruned on later dismissals.</p>
+        <p>The feature ignores non-web text, private or local addresses and clips Android marks as sensitive. It does not continuously monitor the clipboard in the background. The offered link and copy timestamp are held in memory during the activity session. When you dismiss an offer or successfully save media from its link, the app stores a SHA-256 link fingerprint and a 24-hour cooldown locally to avoid repeated prompts; it does not save the raw clipboard text for that cooldown. Expired cooldown entries are pruned on later dismissals.</p>
         <p>Once you accept a link, the normal lookup, website-session and browsing-record behavior described in this policy applies. Android may show a clipboard-access notification.</p>
       </section>
 
       <section id="cookies">
         <h2><span class="number">05</span>Website cookies and sign-ins</h2>
         <p>The regular in-app browser uses Android WebView. Websites can set cookies, including third-party cookies, and use website storage and caches. A website's sign-in session can persist between app launches. Sign-in forms belong to the website you visit; DwnLodr does not create a UTK Apps account or send website passwords to UTK Apps.</p>
+        <p>Settings → Clear cookies removes website cookies; you may need to sign in again. Clearing browsing history does not clear cookies.</p>
         <p>To retrieve media you have chosen, native page and media requests may use the relevant browser profile's session cookies and request headers. Cookie handling checks the destination and applicable cookie scope rather than sending one site's cookies to an unrelated site. Regular-session media metadata can be retained in app-private snapshots as described above. Regular-session cookies and website storage can persist separately from History and tabs.</p>
         <p>Signing out through a website ends that service's session according to its controls. Clearing DwnLodr's storage in Android removes its locally stored website sessions. Clearing History alone does not clear cookies, sign out of websites or close open tabs.</p>
       </section>
@@ -185,6 +187,8 @@
       <section id="permissions">
         <h2><span class="number">09</span>Android permissions and access</h2>
         <ul>
+          <li><strong>Device media access:</strong> with permission, Player reads videos and audio across device folders to discover, sort and play the local library. Android 13 and newer use separate video/audio permissions; older supported versions use storage access. Android may grant only selected videos. The app does not request all-files access.</li>
+
           <li><strong>Internet and network state:</strong> browse websites, search, look up formats and download or stream media.</li>
           <li><strong>Notifications:</strong> show download progress, completion or failure, and playback status. You can control notification permission in Android. Media titles, status details and playback controls may be visible in notifications or on the lock screen according to your system settings.</li>
           <li><strong>Foreground services and wake lock:</strong> keep user-started downloads, media processing and playback running as needed, including when the app is in the background.</li>
@@ -205,24 +209,24 @@
           <li><strong>Apps or providers you select:</strong> information you deliberately share, or files accessed through a file or folder provider you choose. A cloud-backed document provider may process files under its own policy.</li>
           <li><strong>Our email provider:</strong> your address, message and any attachments if you contact us by email, so we can receive and respond to your inquiry.</li>
         </ul>
-        <p>We do not sell or rent personal data, use your local media or browsing records for our own advertising, or receive those records through an app telemetry service. We may disclose correspondence we actually hold if required by applicable law. This policy webpage contains no analytics script, advertising, tracking pixel or visitor form; its hosting provider still processes the connection needed to serve it.</p>
+        <p>We do not sell or rent personal data, use your local media or browsing records for our own advertising, or receive those records through an app telemetry service except for failed source links that you explicitly agree to include in optional failure reports. We may disclose correspondence we actually hold if required by applicable law. This policy webpage contains no analytics script, advertising, tracking pixel or visitor form; its hosting provider still processes the connection needed to serve it.</p>
       </section>
 
       <section id="deletion">
         <h2><span class="number">11</span>Retention and deletion</h2>
         <p>Data remains for the time needed by the local feature or until you remove it. The following controls explain the differences between app records, website sessions and actual files:</p>
         <ul>
-          <li><strong>History and bookmarks:</strong> delete individual entries or clear History from the browser menu. History also drops older entries when its 200-address limit is reached. Bookmarks remain until removed.</li>
+          <li><strong>History and bookmarks:</strong> delete individual entries or clear browsing history from Settings or the browser menu. Clearing history keeps bookmarks and open tabs. History also drops older entries when its 200-address limit is reached. Bookmarks remain until removed.</li>
           <li><strong>Regular tabs:</strong> closing a tab removes it from the saved tab list. Closing tabs does not delete History, bookmarks or website cookies.</li>
           <li><strong>Downloads and imported media:</strong> records remain until removed or app storage is cleared. <strong>Remove</strong> in Player and <strong>Remove from list</strong> in Downloads remove the app's record, not the underlying file. <strong>Delete</strong> asks Android or the selected document provider to delete the actual file; Android may request confirmation. A provider's own trash or retention rules can apply. Files in shared or user-selected storage may remain after uninstalling.</li>
-          <li><strong>Player folders, renaming and MP3 copies:</strong> Player folders are local collections. Deleting a Player folder keeps its files in Player's main list. Moving a file between those collections changes its app organization. Rename can change the actual file name when its provider permits it. Convert to MP3 creates a separate audio file and record and keeps the source video until you delete it separately.</li>
+          <li><strong>Player folders, renaming and MP3 copies:</strong> Player discovers device video and audio folders when permission is granted. Custom folders and explicit Copy/Move actions can change actual local files; Android may ask for approval. Folder deletion follows the confirmation shown in the app. Rename can change the actual file name when its provider permits it. Convert to MP3 creates a separate audio file and record and keeps the source video until you delete it separately.</li>
           <li><strong>Cookies, site storage, preferences and cached media information:</strong> retention varies by the website, cache and app feature. Older unused format snapshots are pruned; metadata needed for download records can be retained. App-language settings remain until changed or reset through the app or Android. Clearing app storage removes app-private records and settings; Android manages the associated document permissions and per-app language state. Upgrade cleanup can remove obsolete extraction-engine runtime files and settings left by older versions without deleting saved media.</li>
           <li><strong>Incognito:</strong> private browsing data is cleared when the session closes, with abandoned-profile cleanup on later startup. Downloads you chose to save remain separately.</li>
           <li><strong>Clipboard dismissals:</strong> a hashed link is suppressed for 24 hours. Expired entries are pruned on subsequent dismissals; clearing app storage removes the stored hashes.</li>
           <li><strong>Anonymous vault:</strong> encrypted files remain until unhidden or app data is deleted. Unhide All also forgets the PIN after all files are successfully restored. Unhide first to preserve media you need. Clearing storage or uninstalling permanently removes private files and the local keys needed to read them.</li>
           <li><strong>Privacy and support emails:</strong> we retain correspondence as needed to answer and resolve your request, then delete it unless retention is required by law. You may ask us to delete correspondence using the contact below.</li>
         </ul>
-        <p>To remove all app-private data, use Android Settings → Apps → DwnLodr → Storage → Clear storage, or uninstall the app. Labels vary by device. First save or unhide files you want to keep; then separately remove any unwanted files from shared folders. DwnLodr has no developer account to delete. To delete information held by a website or other service, use that service's own privacy and account controls.</p>
+        <p>To remove all app-private data, use Android Settings → Apps → DwnLodr → Storage → Clear storage, or uninstall the app. Labels vary by device. First save or unhide files you want to keep; then separately remove any unwanted files from shared folders. DwnLodr has no user-facing app account to delete. Optional reporting uses the technical identity described below; contact us to request deletion of reports already sent. To delete information held by a website or other service, use that service's own privacy and account controls.</p>
       </section>
 
       <section id="security">
@@ -245,8 +249,18 @@
         <p>Please identify DwnLodr in your message. Do not send your vault PIN, website passwords or private media to obtain support.</p>
       </section>
 
+      <section id="failure-reports">
+        <h2><span class="number">15</span>Optional download failure reports</h2>
+        <p><strong>Off by default.</strong> In builds offering this feature, Settings → Send download failure reports first explains the data and asks you to agree. Without affirmative consent, DwnLodr does not initialize its Firebase reporting service or queue or send failure reports. Declining the consent dialog has no effect on downloading.</p>
+        <p>After you agree, a final failure during media lookup, downloading, processing or saving may send the original post or webpage link, the pasted-link or browser route, the failed stage, a technical error category or HTTP status, relevant code stack frames, app version, Android version, device manufacturer/model, time, and a randomly generated reporting identifier. A source link can reveal what you were viewing or trying to download, even when it is not associated with your name.</p>
+        <p>Reports remove URL fragments, tracking parameters and credential/signature parameters; only a small set of content-identifying query parameters is retained. Known temporary media-CDN addresses and direct media-file URLs are not reported. We do not include media files, media titles, page contents, PINs, passwords, login cookies or authorization headers. Network/connection errors and user cancellations are excluded. HTTP error responses such as 403, 404 or 429 can be reported because the website returned a response. Incognito activity and Anonymous hidden media are excluded.</p>
+        <p><strong>Recipient and purpose:</strong> UTK Apps receives these reports in a private Google Firebase Cloud Firestore database to diagnose and fix download problems. Firebase Authentication creates an anonymous technical identity after consent; Firebase App Check uses app/device attestation to protect the report endpoint. Google processes authentication/installation identifiers, attestation and normal connection information, including IP addresses, to provide and secure these services. These identifiers can associate reports from the same installation; they do not require your email, phone number or website login. See <a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a> and <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>. Processing may occur outside your country.</p>
+        <p><strong>Storage and limits:</strong> Unsaved reports are queued in encrypted app-private storage, excluded from Android backup, for up to seven days. The queue holds at most 50 reports; at most 20 distinct reports per rolling 24 hours are accepted locally. Duplicate failures for the same cleaned link, route, stage and category are limited for 24 hours. Reports are best-effort diagnostics, not a complete audit log of every failure. Reports already sent are retained while needed to investigate the problem and are deleted when no longer needed; they are not used for advertising or sold.</p>
+        <p><strong>Your choice:</strong> Turn reporting off in Settings at any time. This cancels pending uploads and deletes queued reports on your device. It does not recall a report already received or an upload that has already reached the service. To request deletion of reports already sent, contact <a href="mailto:utkapps.dev@gmail.com">utkapps.dev@gmail.com</a> with the affected source link and approximate report time so we can locate them. Clearing app data or uninstalling also removes the local queue and consent choice.</p>
+      </section>
+
       <section id="changes">
-        <h2><span class="number">15</span>Changes to this policy</h2>
+        <h2><span class="number">16</span>Changes to this policy</h2>
         <p>We will update this page and the "Last updated" date when DwnLodr's privacy practices change. Material changes will also be communicated through an appropriate in-app notice or release information. The version published here describes the practices covered from the effective date above.</p>
       </section>
     </main>
