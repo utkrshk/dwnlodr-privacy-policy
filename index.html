@@ -98,7 +98,7 @@
       <p class="eyebrow">DwnLodr · Android</p>
       <h1>Privacy Policy</h1>
       <p class="intro">What DwnLodr keeps on your phone, what it sends when you use online features, and the choices you have.</p>
-      <div class="dates"><span>Effective: <time datetime="2026-10-23">23 October 2026</time></span><span>Last updated: <time datetime="2026-11-13">13 November 2026</time></span></div>
+      <div class="dates"><span>Effective: <time datetime="2026-10-23">23 October 2026</time></span><span>Last updated: <time datetime="2026-11-16">16 November 2026</time></span></div>
       <aside class="summary" aria-labelledby="at-a-glance">
         <h2 id="at-a-glance">At a glance</h2>
         <ul>
@@ -112,8 +112,8 @@
       <section id="about">
         <h2><span class="number">01</span>About this policy</h2>
         <p>UTK Apps ("we", "us" or "our") develops DwnLodr (the "app"), an Android application for browsing supported websites, saving permitted media, and playing and organizing media on your device. Its package name is <code>com.dwnlodr.app</code>.</p>
-        <p>This policy describes DwnLodr's data handling, including optional failure reporting introduced for version 0.9.107. Reporting is available only in builds where the service has been configured and verified. It covers the app and this policy webpage. Websites and services you access through the app have their own privacy policies.</p>
-        <p>DwnLodr does not require an app account. Except for the optional failure reports described below, it does not send your browsing history, downloads or private media to a UTK Apps backend. If you choose to email us, we receive the information you include in that email as described below.</p>
+        <p>This policy describes DwnLodr's data handling, including optional failure reporting and online Instagram recovery. Reporting is available only in builds where the service has been configured and verified. It covers the app and this policy webpage. Websites and services you access through the app have their own privacy policies.</p>
+        <p>DwnLodr does not require an app account. Optional online Instagram recovery sends the selected post link to our backend only after you allow it; optional failure reporting sends the limited diagnostics described below after separate consent. Other browsing records, downloaded files and private media are not uploaded to a UTK Apps backend. If you choose to email us, we receive the information you include in that email as described below.</p>
       </section>
 
       <section id="local-data">
@@ -247,6 +247,15 @@
         <p>UTK Apps cannot remotely inspect or erase information held only on your device. We can help you locate the relevant controls and handle requests concerning correspondence we receive. Website providers handle requests for the information they hold.</p>
         <p><strong>Developer:</strong> UTK Apps<br><strong>App:</strong> DwnLodr · <code>com.dwnlodr.app</code><br><strong>Privacy contact:</strong> <a href="mailto:utkapps.dev@gmail.com?subject=DwnLodr%20privacy%20inquiry">utkapps.dev@gmail.com</a></p>
         <p>Please identify DwnLodr in your message. Do not send your vault PIN, website passwords or private media to obtain support.</p>
+      </section>
+
+      <section id="instagram-recovery">
+        <h2>Optional online Instagram recovery</h2>
+        <p>If both on-device methods fail to find an Instagram post or Reel, DwnLodr can ask our backend to find download options. Before this first use, the app asks permission to send the selected Instagram post link to UTK Apps through Cloudflare. Allowing it enables future recovery of failed Instagram lookups; you can turn it off in Settings &rarr; Online Instagram recovery. This choice is separate from optional failure reporting. Normal successful lookups do not use this backend. Incognito browsing, hidden media, Stories, feed pages and unrelated websites are excluded.</p>
+        <p><strong>Information and purpose:</strong> the request contains the canonical Instagram post/Reel link with tracking parameters and URL fragments removed, an app-version user-agent header and an attestation token. The link can reveal the post you are trying to access. Google Firebase App Check with Play Integrity verifies the app installation and processes the installation/attestation identifiers and connection information needed for that check. Recovery does not create a Firebase Authentication account or enable diagnostic reporting. Cloudflare receives normal connection information including the requesting IP address to serve and secure the endpoint. A one-way hash of that address is used for short-lived rate-limit counters; no post link is included in those counters.</p>
+        <p><strong>Processing and retention:</strong> our Worker processes the link and returned metadata in memory for the current request, returns only download-related fields and sends private/no-store responses. It does not store a history or database of these recovery links, save the media on our server, or enable Worker application logs. Cloudflare and Google may separately process and retain service, security and network information under their own policies. Processing may occur outside your country. See <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare’s Privacy Policy</a> and <a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a>.</p>
+        <p><strong>Account and media boundaries:</strong> the backend may use a developer-controlled Instagram session, held as an encrypted server secret, to obtain metadata for supported public-account posts. It refuses private-account media, restricted audiences, missing public-visibility information, protected media and requests requiring interactive verification. Your Instagram password, app-browser login cookies, PINs, media files and page contents are not uploaded for recovery; the server session is not returned to the app. Actual media downloads use the app’s existing connection to the original media host. Availability, service limits and account-session expiry can prevent recovery.</p>
+        <p>Turning recovery off stops future recovery/attestation requests; it does not remove already saved downloads or information the service providers retain for their own security and legal obligations. The permission choice is stored locally and is reset by clearing app storage or reinstalling. For questions about this feature, contact UTK Apps using the details below.</p>
       </section>
 
       <section id="failure-reports">
